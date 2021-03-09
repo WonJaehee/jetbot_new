@@ -20,7 +20,7 @@ python3 road_data_collection.py
 ----------------------------------------
 2. train_road foloww_model
 
-python3 train_rf_model.p
+python3 train_rf_model.py
 
 ----------------------------------------
 
