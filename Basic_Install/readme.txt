@@ -1,6 +1,6 @@
 git clone https://github.com/katebrighteyes/jetbot_new
 
-cd Basic_Install
+cd jetbot_new
 
 chmod 777 install_jetbot_basic.sh
 ./install_jetbot_basic.sh
