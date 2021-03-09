@@ -79,6 +79,7 @@ def Video(openpath):
         print("key int")
         cap.release()
         cv2.destroyAllWindows()
+        time.sleep(0.5)
         return
 	
     # When everything done, release the capture
