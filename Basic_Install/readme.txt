@@ -1,11 +1,11 @@
 git clone https://github.com/katebrighteyes/jetbot_new
 
-cd jetbot_new
+cd jetbot_new/Basic_Install
 
 chmod 777 install_jetbot_basic.sh
 ./install_jetbot_basic.sh
 
-20분~30분 정도 소요됩니다.
+10분~30분 정도 소요됩니다.
 
 python3 jetbot_camera.py
 
