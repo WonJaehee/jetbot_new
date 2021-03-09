@@ -1,12 +1,10 @@
-* YOU MUST INSTALL PYTORCH BEFORE START THIS. *
+* YOU MUST INSTALL PYTORCH BEFORE START THIS.!!
 
 * IF NOT : 
-   cd
-   cd StartDL
-   chmod 777 *.sh
-   ./install-pytorch.sh
-   -> It might take more than 40 minutes.
-   ./install_torch2trt.sh
+   go to tis page to Install DL setting 
+   
+   https://github.com/katebrighteyes/jetbot_new/tree/main/StartDL
+   
 
 1. data_collection
 
@@ -37,6 +35,8 @@ python3 data_collection2.py 0
 python3 train_fca_model.py
 
 ----------------------------------------
+
+* YOU MUST set power mod 5W !!
 
 3. fca_live_demo
 
