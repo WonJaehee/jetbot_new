@@ -25,8 +25,11 @@ def preprocess(image):
 	
 angle = 0.0
 angle_last = 0.0
+#speed_gain_value = 1.0
+speed_gain_value = 0.18
 steering_value = 0.0
-steering_gain_value = 0.0
+#steering_gain_value = 0.1
+steering_gain_value = 0.03
 steering_bias_value = 0.0
 
 def executeModel(image):
@@ -40,6 +43,7 @@ def executeModel(image):
     print(y)
     print('---')
     '''
+    speed_value = speed_gain_value
     angle = np.arctan2(x, y)
     pid = angle * steering_value + (angle - angle_last) * steering_dgain_value
     angle_last = angle
