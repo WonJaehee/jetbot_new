@@ -2,8 +2,6 @@
 # 20210720
 
 gst_str = ("nvarguscamerasrc ! video/x-raw(memory:NVMM), width=(int)480, height=(int)360, format=(string)NV12, framerate=(fraction)60/1 ! nvvidconv flip-method=0 ! video/x-raw, width=(int)480, height=(int)360, format=(string)BGRx ! videoconvert ! video/x-raw, format=(string)BGR ! appsink")
-#gst_str = ("nvarguscamerasrc ! video/x-raw(memory:NVMM), width=(int)640, height=(int)480, format=(string)NV12, framerate=(fraction)60/1 ! nvvidconv flip-method=0 ! video/x-raw, width=(int)640, height=(int)480, format=(string)BGRx ! videoconvert ! video/x-raw, format=(string)BGR ! appsink")
-
 
 import cv2
 import numpy as np
@@ -63,7 +61,7 @@ def Video(openpath):
             # Capture frame-by-frame
             ret, frame = cap.read()
             if ret:
-                frame = cv2.resize(frame, dsize=(224, 224), interpolation=cv2.INTER_AREA)
+                #frame = cv2.resize(frame, dsize=(224, 224), interpolation=cv2.INTER_AREA)
                 cv2.imshow("Input", frame)
             else:
                 break
