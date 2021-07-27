@@ -1,9 +1,7 @@
 # kate.brighteyes@gmail.com
 # 20210720
 
-gst_str = ("nvarguscamerasrc ! video/x-raw(memory:NVMM), width=(int)480, height=(int)360, format=(string)NV12, framerate=(fraction)60/1 ! nvvidconv flip-method=0 ! video/x-raw, width=(int)480, height=(int)360, format=(string)BGRx ! videoconvert ! video/x-raw, format=(string)BGR ! appsink")
-#gst_str = ("nvarguscamerasrc ! video/x-raw(memory:NVMM), width=(int)640, height=(int)480, format=(string)NV12, framerate=(fraction)60/1 ! nvvidconv flip-method=0 ! video/x-raw, width=(int)640, height=(int)480, format=(string)BGRx ! videoconvert ! video/x-raw, format=(string)BGR ! appsink")
-
+gst_str = ("nvarguscamerasrc ! video/x-raw(memory:NVMM), width=(int)224, height=(int)224, format=(string)NV12, framerate=(fraction)60/1 ! nvvidconv flip-method=0 ! video/x-raw, width=(int)224, height=(int)224, format=(string)BGRx ! videoconvert ! video/x-raw, format=(string)BGR ! appsink")
 
 import cv2
 import numpy as np
@@ -97,7 +95,7 @@ def Video(openpath, savepath = None):
             ret, frame = cap.read()
             if ret:
                 # Our operations on the frame come here
-                frame = cv2.resize(frame, dsize=(224, 224), interpolation=cv2.INTER_AREA) 
+                #frame = cv2.resize(frame, dsize=(224, 224), interpolation=cv2.INTER_AREA) 
                 imageProcessing(frame)
                 cv2.imshow("Output", frame)
             else:
